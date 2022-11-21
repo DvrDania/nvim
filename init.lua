@@ -1,14 +1,14 @@
 vim.cmd("set noequalalways")
 vim.cmd("set mouse=nv")
 vim.cmd("set termguicolors")
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme everforest")
 
 vim.cmd("set expandtab")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set termguicolors")
 vim.cmd("set number")
-vim.cmd("set background=light")
+vim.cmd("set background=dark")
 
 -- mappings
 vim.g.mapleader = ' '
