@@ -21,9 +21,9 @@ cmp.setup({
     })
 })
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local on_attach_prettier = function(client, bufnr)
+local on_attach_prettier = function(_, bufnr)
     vim.cmd([[autocmd BufWritePre <buffer> lua vim.cmd(":Prettier")]])
 
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -43,7 +43,7 @@ local on_attach_prettier = function(client, bufnr)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
-local on_attach_default = function(client, bufnr)
+local on_attach_default = function(_, bufnr)
     vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]])
 
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
