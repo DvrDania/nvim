@@ -8,7 +8,7 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set termguicolors")
 vim.cmd("set number")
-vim.cmd("set background=dark")
+vim.cmd("set background=light")
 
 -- mappings
 vim.g.mapleader = ' '
@@ -18,7 +18,7 @@ require 'plugins'
 require 'lsp'
 
 -- diagnostic customizations
-vim.diagnostic.config({ virtual_text = false })
+vim.diagnostic.config { virtual_text = false }
 
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
