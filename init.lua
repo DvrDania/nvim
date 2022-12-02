@@ -13,6 +13,7 @@ vim.cmd("set background=light")
 -- mappings
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<F1>', ':FZF<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<space><space>', ':bnext<CR>', { noremap = true })
 
 require 'plugins'
 require 'lsp'
@@ -25,4 +26,3 @@ vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
-vim.keymap.set('n', '<space><space>', ':bnext<CR>', opts)
